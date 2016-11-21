@@ -9,11 +9,17 @@ exports = module.exports = function(resume, ceremony, store, authenticator) {
       next();
     },
     // TODO: Don't do sessions here
-    authenticator.authenticate('persona', { session: true, failWithError: true  }),
+    authenticator.authenticate('browserid', { session: true, failWithError: true  }),
     function(req, res, next) {
       console.log('authenticated:');
       console.log(req.user);
       next();
+    },
+    function(err, req, res, next) {
+      console.log('err:');
+      console.log(err);
+      console.log(err.stack)
+      next(err);
     },
     resume
   ];
