@@ -13,6 +13,7 @@ exports = module.exports = function(resume, ceremony, store, authenticator) {
     function(req, res, next) {
       console.log('authenticated:');
       console.log(req.user);
+      console.log(req.authInfo);
       next();
     },
     function(err, req, res, next) {
