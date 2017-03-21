@@ -29,7 +29,7 @@ exports = module.exports = function(resume, ceremony, store, authenticator) {
 
 exports['@require'] = [
   '../../ceremony/resume',
-  'http://i.bixbyjs.org/www/ceremony/Dispatcher',
-  'http://i.bixbyjs.org/www/ceremony/StateStore',
+  'http://i.bixbyjs.org/http/state/Dispatcher',
+  'http://i.bixbyjs.org/http/state/Store',
   'http://i.bixbyjs.org/http/Authenticator'
 ];
