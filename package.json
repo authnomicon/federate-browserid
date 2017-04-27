@@ -1,5 +1,5 @@
 {
-  "name": "nodex-aaa-login-browserid",
+  "name": "@authnomicon/federate-browserid",
   "version": "0.0.0",
   "description": "",
   "author": {
@@ -9,10 +9,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/authnomicon/nodex-aaa-login-browserid.git"
+    "url": "git://github.com/authnomicon/federate-browserid.git"
   },
   "bugs": {
-    "url": "http://github.com/authnomicon/nodex-aaa-login-browserid/issues"
+    "url": "http://github.com/authnomicon/federate-browserid/issues"
   },
   "license": "MIT",
   "licenses": [
