@@ -21,7 +21,12 @@
       "url": "http://opensource.org/licenses/MIT"
     }
   ],
-  "main": "./index.js",
+  "main": "./xom",
+  "assembly": {
+    "namespace": "federate/browserid",
+    "components": [
+    ]
+  },
   "devDependencies": {
     "make-node": "^0.3.0",
     "mocha": "^2.0.0",
