@@ -1,4 +1,4 @@
-exports = module.exports = function(resume, ceremony, store, authenticator) {
+exports = module.exports = function(/*resume,*/ ceremony, store /*, authenticator*/) {
   
   return [
     require('body-parser').urlencoded({ extended: false }),
@@ -9,7 +9,7 @@ exports = module.exports = function(resume, ceremony, store, authenticator) {
       next();
     },
     // TODO: Don't do sessions here
-    authenticator.authenticate('browserid', { session: true, failWithError: true  }),
+    //authenticator.authenticate('browserid', { session: true, failWithError: true  }),
     function(req, res, next) {
       console.log('authenticated:');
       console.log(req.user);
@@ -22,14 +22,14 @@ exports = module.exports = function(resume, ceremony, store, authenticator) {
       console.log(err.stack)
       next(err);
     },
-    resume
+    //resume
   ];
   
 };
 
 exports['@require'] = [
-  'login/activity/login/resume',
+  //'login/activity/login/resume',
   'http://i.bixbyjs.org/http/state/Dispatcher',
   'http://i.bixbyjs.org/http/workflow/StateStore',
-  'http://i.bixbyjs.org/http/Authenticator'
+  //'http://i.bixbyjs.org/http/Authenticator'
 ];

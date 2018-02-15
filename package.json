@@ -25,6 +25,7 @@
   "assembly": {
     "namespace": "federate/browserid",
     "components": [
+      "handlers/browserid/verify"
     ]
   },
   "devDependencies": {
