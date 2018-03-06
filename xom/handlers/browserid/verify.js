@@ -1,8 +1,8 @@
-exports = module.exports = function(/*resume,*/ ceremony, store /*, authenticator*/) {
+exports = module.exports = function(/*resume,*/ /*ceremony,*/ store /*, authenticator*/) {
   
   return [
     require('body-parser').urlencoded({ extended: false }),
-    ceremony.loadState('login'),
+    //ceremony.loadState('login'),
     function(req, res, next) {
       console.log('verify:');
       console.log(req.body);
@@ -29,7 +29,7 @@ exports = module.exports = function(/*resume,*/ ceremony, store /*, authenticato
 
 exports['@require'] = [
   //'login/activity/login/resume',
-  'http://i.bixbyjs.org/http/state/Dispatcher',
+  //'http://i.bixbyjs.org/http/state/Dispatcher',
   'http://i.bixbyjs.org/http/workflow/StateStore',
   //'http://i.bixbyjs.org/http/Authenticator'
 ];

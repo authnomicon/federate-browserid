@@ -1,7 +1,10 @@
 exports = module.exports = function(verify) {
   var Strategy = require('passport-browserid');
   
-  var strategy = new Strategy({ audience: 'http://localhost:8080' }, verify);
+  var trustedIssuers = [];
+  //var trustedIssuers = [ 'gmail.login.persona.org' ];
+  
+  var strategy = new Strategy({ audience: 'http://localhost:8080', trustedIssuers: trustedIssuers }, verify);
   return strategy;
 };
 
