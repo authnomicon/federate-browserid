@@ -30,6 +30,6 @@ exports = module.exports = function(/*resume,*/ /*ceremony,*/ store /*, authenti
 exports['@require'] = [
   //'login/activity/login/resume',
   //'http://i.bixbyjs.org/http/state/Dispatcher',
-  'http://i.bixbyjs.org/http/workflow/StateStore',
+  'http://i.bixbyjs.org/http/state/Store',
   //'http://i.bixbyjs.org/http/Authenticator'
 ];
